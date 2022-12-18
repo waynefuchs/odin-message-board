@@ -1,12 +1,9 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const PostSchema = new mongoose.Schema({
-  message: {
-    type: String,
-  },
-  posted: {
-    type: Date,
-  },
-})
+  user: { type: String },
+  message: { type: String },
+  posted: { type: Date },
+});
 
-export default mongoose.models.Post || mongoose.model('Post', PostSchema)
+export default mongoose.models.Post || mongoose.model("Post", PostSchema);
