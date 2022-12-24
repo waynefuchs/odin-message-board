@@ -1,0 +1,49 @@
+// (CREATE)
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "email": "somedude@poop.com",
+  "name": "imalsoauser",
+  "password": "onetwothree"
+}
+###
+
+
+
+
+// READ
+GET http://localhost:3000/api/users
+###
+
+GET http://localhost:3000/api/users
+Content-Content-Type: application/json
+
+{
+  "email": "somedud@poop.com"
+}
+###
+
+
+// UPDATE
+PUT http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "id": "63a654942078ae78ab143877",
+  "name": "bob is literally my uncle",
+  "email": "I am an invalid email but who cares"
+}
+###
+
+
+
+
+// DELETE
+DELETE http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "id": "63a653b42078ae78ab14386d"
+}
+###

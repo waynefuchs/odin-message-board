@@ -8,6 +8,7 @@ const UserSchema = new mongoose.Schema({
   password: { type: String },
   hash: { type: String },
   session: { type: String },
+  admin: { type: Boolean },
 });
 
 export default mongoose.models.User || mongoose.model("User", UserSchema);

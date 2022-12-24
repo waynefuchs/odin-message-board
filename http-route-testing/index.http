@@ -1,40 +1,18 @@
 // Main site
 GET http://localhost:3000/
-
 ### 
 
 GET http://localhost:3000/api
-
 ###
 
-// USERS
-//
-// (CREATE) User
-POST http://localhost:3000/api/users
-Content-Type: application/json
-
-{
-  "email": "someguy@somewhere.com",
-  "name": "testuser",
-  "password": "abcdabcd"
-}
-
-###
-
-// (READ) Users
-GET http://localhost:3000/api/users
-
+GET http://localhost:3000/api/test
 ###
 
 
-
-
-
-
-
+///////////////////////////////////
 // POSTS
 //
-// (CREATE) Posts
+// (CREATE post)
 POST http://localhost:3000/api/posts
 Content-Type: application/json
 
@@ -43,8 +21,8 @@ Content-Type: application/json
   "message": "The quick brown fox jumped over the lazy dog.",
   "posted": "Wed, 21 Oct 2015 18:27:50 GMT"
 }
-
 ###
 
-// (READ) Posts
+// (READ post)
 GET http://localhost:3000/api/posts
+###
