@@ -1,6 +1,6 @@
 import dbConnect from "../../lib/dbConnect";
 import User from "../../models/User";
-import bcrypt from "bcrypt";
+// import bcrypt from "bcrypt";
 
 async function Create(req, res) {
   try {
@@ -21,7 +21,9 @@ async function Create(req, res) {
       throw new Error("User name already exists");
 
     // Get the hash
-    const hash = await bcrypt.hash(password, saltRounds);
+    // const hash = await bcrypt.hash(password, saltRounds);
+    const hash = "NOT A REAL HASH";
+
     const user = await User.create({
       email,
       verified,
@@ -41,10 +43,10 @@ async function Read(req, res) {
   try {
     const { id, email, name } = req.body;
     const query = {
-      ...id && {_id: id},
-      ...email && {email},
-      ...name && {name}
-    }
+      ...(id && { _id: id }),
+      ...(email && { email }),
+      ...(name && { name }),
+    };
 
     if (Object.keys(query).length > 0) {
       const user = await User.findOne({ query });
