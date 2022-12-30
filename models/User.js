@@ -11,4 +11,9 @@ const UserSchema = new mongoose.Schema({
   admin: { type: Boolean },
 });
 
+async function doesUserEmailExist(email) {
+  const user = await User.find({ email });
+  return user.length === 1 ? user : false;
+}
+
 export default mongoose.models.User || mongoose.model("User", UserSchema);
