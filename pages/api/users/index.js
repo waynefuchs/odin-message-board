@@ -1,6 +1,6 @@
-import dbConnect from "../../lib/dbConnect";
-import User from "../../models/User";
-// import bcrypt from "bcrypt";
+import dbConnect from "../../../lib/db/dbConnect";
+import User from "../../../models/User";
+import bcrypt from "bcrypt";
 
 async function Create(req, res) {
   try {
@@ -21,8 +21,7 @@ async function Create(req, res) {
       throw new Error("User name already exists");
 
     // Get the hash
-    // const hash = await bcrypt.hash(password, saltRounds);
-    const hash = "NOT A REAL HASH";
+    const hash = await bcrypt.hash(password, saltRounds);
 
     const user = await User.create({
       email,
@@ -116,19 +115,4 @@ export default async function handler(req, res) {
       res.status(405).json({ success: false, error: "Method not supported" });
       break;
   }
-}
-
-async function doesUserIdExist(id) {
-  const user = await User.find({ id });
-  return user.length === 1 ? user : false;
-}
-
-async function doesUserNameExist(name) {
-  const user = await User.find({ name });
-  return user.length === 1 ? user : false;
-}
-
-async function doesUserEmailExist(email) {
-  const user = await User.find({ email });
-  return user.length === 1 ? user : false;
 }
