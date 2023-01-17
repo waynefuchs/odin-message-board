@@ -1,6 +1,5 @@
 import dbConnect from "../../../lib/db/dbConnect";
-import userUtil from "../../../lib/db/user_db_util";
-// import User from "../../models/User";
+import User from "../../../models/User";
 
 import jwt from "jsonwebtoken";
 
@@ -9,7 +8,7 @@ export default async function handler(req, res) {
   switch (req.method) {
     case "POST":
       try {
-        const user = await userUtil.verifyUserCredentials(
+        const user = await User.verifyUserCredentials(
           req.body.email,
           req.body.password
         );
