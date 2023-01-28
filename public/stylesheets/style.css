@@ -1,27 +1,91 @@
+@font-face {
+  font-family: Nunito;
+  src: url(../fonts/Nunito/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: ScopeOne;
+  src: url(../fonts/Scope_One/ScopeOne-Regular.ttf);
+}
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* font: 14px "Nunito", sans-serif; */
+  font: 14px "ScopeOne", serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+.margin-left {
+  margin-left: 1rem;
+}
+
+.input-font {
+  font: 24px "Nunito", sans-serif;
+}
+
+.messages {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .message {
   padding: 1rem;
   color: #ccccdd;
-  background: #123456;
+  background: #223344;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  border-radius: 1rem;
 }
 
 .user {
+  font-weight: bold;
+  color: #eeddcc;
+  font-size: 1.5rem;
 }
 
 .date {
+  font-family: Nunito;
   text-align: right;
+  color: #9999aa;
 }
 
 .text {
+  font-size: 1.5rem;
 }
 
-a {
+.button {
+  font-size: 1.5rem;
   color: #00b7ff;
+  text-decoration: none;
+  padding: 5px 15px 0px 15px;
+  border: 3px solid #00b7ff;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background: #00b7ff;
+  color: #ffffff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+textarea {
+  resize: none;
+}
+
+div.input {
+  display: flex;
+  flex-direction: column;
 }

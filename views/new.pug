@@ -2,4 +2,16 @@ extends layout
 
 block content
   h1= title
-  p New Card #{title}
+    a(class="button margin-left", href="/") Back
+
+  form(method="post", action="/new")
+    div.input
+      label(for="user") User Name
+      input.input-font(type="text", name="user", id="user", placeholder="Type your name here...")
+
+    div.input
+      label(for="message") Message
+      textarea.input-font(type="text", name="message", id="message", placeholder="Your message goes here...", rows="5", cols="80")
+
+    div.input
+      button(class="button", type="submit") Post

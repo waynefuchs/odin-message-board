@@ -2,10 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+    a(class="button margin-left", href="/new") New Message
 
-  each message in messages
-    div.message
-      div.user #{message.user}
-      div.date #{message.added.toLocaleDateString()}
-      div.text #{message.text}
+  div.messages
+    each message in messages
+      div.message
+        div.user #{message.user}
+        div.date #{message.added.toLocaleString()}
+        div.text #{message.text}
