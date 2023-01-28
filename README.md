@@ -18,6 +18,6 @@ By clicking on the link to create a new message, a second view is displayed. Thi
 
 ## After Submission
 
-Miss Trunchbull from _Matilda_ has visited the site and has left a sour comment for us...
+Here are a selection of quotes from _Alice's Adventures in Wonderland_ by Lewis Carroll to test a few submissions to the message board.
 
 ![New Post](screenshots/02-new-post-added.png)
