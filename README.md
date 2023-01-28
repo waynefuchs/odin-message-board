@@ -18,6 +18,6 @@ By clicking on the link to create a new message, a second view is displayed. Thi
 
 ## After Submission
 
-Miss Trunchbull from _Matilda_ has gotten on the site and has left a sour comment for us...
+Miss Trunchbull from _Matilda_ has visited the site and has left a sour comment for us...
 
 ![New Post](screenshots/02-new-post-added.png)
