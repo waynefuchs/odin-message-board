@@ -3,6 +3,25 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.message {
+  padding: 1rem;
+  color: #ccccdd;
+  background: #123456;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.user {
+}
+
+.date {
+  text-align: right;
+}
+
+.text {
+}
+
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
